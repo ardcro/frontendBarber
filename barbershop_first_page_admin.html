@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbier - Termine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/barbershop_first_page_admin.css">
+</head>
+<body>
+
+    <header>
+        <h1>Barbier Termine</h1>
+        <a href="#logout" class="logout-btn">Log Out</a>
+    </header>
+
+    <nav>
+        <a href="#today">Heute</a>
+        <a href="#week">Diese Woche</a>
+        <a href="#next-week">Nächste Woche</a>
+        <a href="#next-30-days">Nächste 30 Tage</a>
+    </nav>
+
+    <!-- Heute -->
+    <div class="schedule-section" id="today">
+        <h2>Heute</h2>
+        <ul>
+            <li>10:00 - Max Mustermann - Haarschnitt</li>
+            <li>11:00 - Maria Musterfrau - Bartpflege</li>
+            <li>13:00 - Paul Beispielmann - Haarschnitt</li>
+        </ul>
+    </div>
+
+    <!-- Diese Woche -->
+    <div class="schedule-section" id="week">
+        <h2>Diese Woche</h2>
+        <ul>
+            <li>Montag, 16. September: 10:00 - Sebastian Barber - Haarschnitt</li>
+            <li>Dienstag, 17. September: 14:00 - Tim Schneider - Bartpflege</li>
+            <li>Mittwoch, 18. September: 16:00 - John Doe - Haarschnitt</li>
+            <!-- Weitere Termine für diese Woche -->
+        </ul>
+    </div>
+
+    <!-- Nächste Woche -->
+    <div class="schedule-section" id="next-week">
+        <h2>Nächste Woche</h2>
+        <ul>
+            <li>Montag, 23. September: 11:00 - Anna Müller - Haarschnitt</li>
+            <li>Dienstag, 24. September: 13:00 - Markus Schmidt - Bartpflege</li>
+            <li>Freitag, 27. September: 15:00 - Laura Becker - Haarschnitt</li>
+            <!-- Weitere Termine für nächste Woche -->
+        </ul>
+    </div>
+
+    <!-- Nächste 30 Tage -->
+    <div class="schedule-section" id="next-30-days">
+        <h2>Nächste 30 Tage</h2>
+        <ul>
+            <li>25. September: 09:00 - Erik Meyer - Haarschnitt</li>
+            <li>30. September: 14:00 - Julia Weiß - Bartpflege</li>
+            <li>5. Oktober: 10:00 - Jan Fischer - Haarschnitt</li>
+            <!-- Weitere Termine für die nächsten 30 Tage -->
+        </ul>
+    </div>
+
+    <!-- JavaScript for smooth scrolling -->
+    <script>
+        // Add smooth scrolling to all links in the nav
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Scroll to the element smoothly
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
